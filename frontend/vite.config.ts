@@ -16,5 +16,17 @@ export default defineConfig({
         ws: true
       }
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-three': ['three'],
+          'vendor-icons': ['lucide-react']
+        }
+      }
+    }
   }
 });
