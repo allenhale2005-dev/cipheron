@@ -115,6 +115,21 @@ export const Workspace: React.FC<WorkspaceProps> = ({ currentProfile, onNavigate
 
   return (
     <div className="space-y-6">
+      {/* Spatial HUD Banner */}
+      <div className="bg-chassis-panel border border-chassis-border p-2.5 rounded-sm flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-rose-white select-none">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-none bg-sky-carrier shadow-[0_0_6px_rgba(56,189,248,0.8)] animate-pulse" />
+          <span className="text-sky-carrier font-bold tracking-wider">SPATIAL CONSOLE: ACTIVE</span>
+          <span className="text-chassis-border">/</span>
+          <span className="text-rose-muted text-[11px]">PROJECTION: 3D WEBGL &amp; MONOSPACE TABULAR GRID</span>
+        </div>
+        <div className="flex items-center gap-3 text-[11px]">
+          <span className="text-rose-dim font-tnum">LATENCY: 0.14ms</span>
+          <span className="text-chassis-border">|</span>
+          <span className="text-emerald-400 font-bold">DRDO-SAG CALIBRATED</span>
+        </div>
+      </div>
+
       {/* Input Section */}
       <div className="glass-panel p-5 rounded-xl space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#232B3E] pb-3">

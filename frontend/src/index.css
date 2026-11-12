@@ -37,6 +37,48 @@
   border: 1px solid #241822;
 }
 
+/* Spatial 3D Perspective & Depth UI */
+.spatial-perspective {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.spatial-depth-1 {
+  transform: translateZ(12px);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spatial-depth-1:hover {
+  transform: translateZ(24px) scale(1.01);
+}
+
+.tactical-crosshair {
+  position: relative;
+}
+
+.tactical-crosshair::before,
+.tactical-crosshair::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+}
+
+.tactical-crosshair::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1px solid #38BDF8;
+  border-left: 1px solid #38BDF8;
+}
+
+.tactical-crosshair::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1px solid #38BDF8;
+  border-right: 1px solid #38BDF8;
+}
+
 body {
   margin: 0;
   background-color: #0B0F17;

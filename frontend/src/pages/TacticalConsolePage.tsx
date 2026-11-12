@@ -468,3 +468,4 @@ function decrypt_payload(uint8_t* buffer, size_t length) {
 };
 
 export default TacticalConsolePage;
+
