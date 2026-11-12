@@ -207,34 +207,3 @@ export const TransformationDAG: React.FC<TransformationDAGProps> = ({ dag, onSel
     </div>
   );
 };
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCopy(node.id, node.output_snippet);
-                      }}
-                      className="text-slate-400 hover:text-white flex items-center space-x-1"
-                      title="Copy output"
-                    >
-                      {copiedId === node.id ? (
-                        <Check className="w-3 h-3 text-[#00E676]" />
-                      ) : (
-                        <Copy className="w-3 h-3" />
-                      )}
-                      <span>{copiedId === node.id ? 'Copied' : 'Copy'}</span>
-                    </button>
-                  </div>
-
-                  {/* Status Indicator Pill */}
-                  {isBest && (
-                    <div className="absolute -top-2 -right-2 bg-[#00E676] text-black font-mono font-bold text-[9px] px-1.5 py-0.5 rounded-full shadow-md">
-                      TOP HIT
-                    </div>
-                  )}
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-};
