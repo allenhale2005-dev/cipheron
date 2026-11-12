@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cipheron-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: CURRENT_SECURITY_PROFILE
+        value: STANDARD
