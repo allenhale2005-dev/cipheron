@@ -4,6 +4,37 @@
 
 :root {
   color-scheme: dark;
+  --bg-chassis: #070507;
+  --bg-panel: #0F0A0E;
+  --border-structural: #241822;
+  --border-focus: #38BDF8;
+
+  --carrier-sky: #38BDF8;
+  --carrier-sky-dim: #0284C7;
+  --carrier-sky-glow: rgba(56, 189, 248, 0.12);
+
+  --alert-orange: #F97316;
+  --alert-orange-dim: #EA580C;
+  --alert-orange-glow: rgba(249, 115, 22, 0.15);
+
+  --text-primary: #FFF1F2;
+  --text-muted: #FDA4AF;
+  --text-dim: #9F838C;
+}
+
+.font-tnum {
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.tactical-panel {
+  background-color: #0F0A0E;
+  border: 1px solid #241822;
+  border-radius: 2px;
+}
+
+.tactical-card {
+  background-color: #070507;
+  border: 1px solid #241822;
 }
 
 body {

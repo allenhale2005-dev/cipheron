@@ -3,6 +3,7 @@ import { Microscope, Cpu, Code2, Binary, ShieldCheck, Sparkles, BarChart3, Layer
 
 export type ActiveTab =
   | 'workspace'
+  | 'tactical-console'
   | 'kasiski'
   | 'esoteric'
   | 'wasm'
@@ -44,6 +45,7 @@ interface NavigationProps {
 export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }) => {
   const tabs = [
     { id: 'workspace', label: 'Analysis Studio', icon: Microscope, badge: 'CORE' },
+    { id: 'tactical-console', label: 'DRDO Tactical Console', icon: ShieldCheck, badge: 'DRDO' },
     { id: 'kasiski', label: 'Kasiski & IC Lab', icon: BarChart3, badge: 'V2.0' },
     { id: 'esoteric', label: 'Esoteric Formats', icon: Layers, badge: 'PARSERS' },
     { id: 'wasm', label: 'WASM Sandbox', icon: Box, badge: 'PLUGINS' },

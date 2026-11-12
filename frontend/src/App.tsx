@@ -34,6 +34,7 @@ import { OmniSynapticPage } from './pages/OmniSynapticPage';
 import { OmniCognitivePage } from './pages/OmniCognitivePage';
 import { AbsoluteCognitivePage } from './pages/AbsoluteCognitivePage';
 import { OmnipresentMetarealityPage } from './pages/OmnipresentMetarealityPage';
+import { TacticalConsolePage } from './pages/TacticalConsolePage';
 import { SecurityMode, HardwareStatus } from './types';
 import { api } from './services/api';
 import { ShieldAlert, Terminal, Wifi, CheckCircle2 } from 'lucide-react';
@@ -154,6 +155,13 @@ export const App: React.FC = () => {
           <Workspace
             currentProfile={currentProfile}
             onNavigateToExplain={handleNavigateToExplain}
+          />
+        )}
+
+        {activeTab === 'tactical-console' && (
+          <TacticalConsolePage
+            currentProfile={currentProfile}
+            onProfileChange={handleProfileChange}
           />
         )}
 
