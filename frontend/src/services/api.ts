@@ -79,7 +79,17 @@ import {
   AbsoluteCognitiveKeyDeriveResult,
   ZKAbsoluteCognitiveProofResult,
   ZKAbsoluteCognitiveVerifyResult,
-  TransRecursiveZeroizeResult
+  TransRecursiveZeroizeResult,
+  OmnipresentSingularityTelemetry,
+  SolitonHypercontinuumDispersionResult,
+  OmnipresentSingularityKeyResult,
+  OmnipresentSingularityPSDResult,
+  BellStateRetinalDecodeResult,
+  BellStateRetinalModulateResult,
+  OmnipresentMetarealityKeyDeriveResult,
+  ZKOmniMetarealityProofResult,
+  ZKOmniMetarealityVerifyResult,
+  OmnipresentZeroizeResult
 } from '../types';
 
 
@@ -829,6 +839,99 @@ export const api = {
 
   triggerTransRecursiveZeroize: () =>
     fetchJson<TransRecursiveZeroizeResult>('/trans-recursive/zeroize', {
+      method: 'POST'
+    }),
+
+  getOmnipresentSingularityTelemetry: () =>
+    fetchJson<OmnipresentSingularityTelemetry>('/omnipresent-singularity/telemetry'),
+
+  computeSolitonHypercontinuumDispersion: (membranePotentialUv: number) =>
+    fetchJson<SolitonHypercontinuumDispersionResult>('/omnipresent-singularity/soliton-hypercontinuum-dispersion', {
+      method: 'POST',
+      body: JSON.stringify({ membrane_potential_uv: membranePotentialUv })
+    }),
+
+  extractOmnipresentSingularityKey: (terahertzBurstSamples: number[], panCorticalSamples: number[]) =>
+    fetchJson<OmnipresentSingularityKeyResult>('/omnipresent-singularity/master-key', {
+      method: 'POST',
+      body: JSON.stringify({
+        terahertz_burst_samples: terahertzBurstSamples,
+        pan_cortical_samples: panCorticalSamples
+      })
+    }),
+
+  analyzeOmnipresentSingularityPsd: (terahertzBurstSamples: number[], panCorticalSamples: number[], phaseSync = 0.98) =>
+    fetchJson<OmnipresentSingularityPSDResult>('/omnipresent-singularity/psd-analysis', {
+      method: 'POST',
+      body: JSON.stringify({
+        terahertz_burst_samples: terahertzBurstSamples,
+        pan_cortical_samples: panCorticalSamples,
+        phase_sync: phaseSync
+      })
+    }),
+
+  decodeBellStateRetinal: (tremorSignal: number[]) =>
+    fetchJson<BellStateRetinalDecodeResult>('/omnipresent-singularity/decode-bell-state', {
+      method: 'POST',
+      body: JSON.stringify({ tremor_signal: tremorSignal })
+    }),
+
+  modulateBellStateRetinal: (payloadText: string, carrierFreqHz = 250.0, durationS = 0.5) =>
+    fetchJson<BellStateRetinalModulateResult>('/omnipresent-singularity/modulate-bell-state', {
+      method: 'POST',
+      body: JSON.stringify({
+        payload_text: payloadText,
+        carrier_freq_hz: carrierFreqHz,
+        duration_s: durationS
+      })
+    }),
+
+  deriveOmnipresentMetarealityKey: (
+    terahertzBurstSamples: number[],
+    panCorticalSamples: number[],
+    hypercontinuumPhase: number,
+    dnaCodonStream: string,
+    panRetinalFreqHz: number,
+    salt?: string
+  ) =>
+    fetchJson<OmnipresentMetarealityKeyDeriveResult>('/omnipresent-singularity/derive-131072bit-key', {
+      method: 'POST',
+      body: JSON.stringify({
+        terahertz_burst_samples: terahertzBurstSamples,
+        pan_cortical_samples: panCorticalSamples,
+        hypercontinuum_phase: hypercontinuumPhase,
+        dna_codon_stream: dnaCodonStream,
+        pan_retinal_freq_hz: panRetinalFreqHz,
+        salt: salt
+      })
+    }),
+
+  generateZKOmniMetarealityProof: (
+    terahertzCrossPower: number,
+    hypercontinuumPhase: number,
+    panRetinalFreqHz: number,
+    dnaCodons: string,
+    userIdentity = 'OPERATOR_OMNIPRESENT_01'
+  ) =>
+    fetchJson<ZKOmniMetarealityProofResult>('/omnipresent-singularity/zk-proof', {
+      method: 'POST',
+      body: JSON.stringify({
+        terahertz_cross_power: terahertzCrossPower,
+        hypercontinuum_phase: hypercontinuumPhase,
+        pan_retinal_freq_hz: panRetinalFreqHz,
+        dna_codons: dnaCodons,
+        user_identity: userIdentity
+      })
+    }),
+
+  verifyZKOmniMetarealityProof: (proof: any) =>
+    fetchJson<ZKOmniMetarealityVerifyResult>('/omnipresent-singularity/zk-verify', {
+      method: 'POST',
+      body: JSON.stringify({ proof })
+    }),
+
+  triggerOmnipresentSingularityZeroize: () =>
+    fetchJson<OmnipresentZeroizeResult>('/omnipresent-singularity/zeroize', {
       method: 'POST'
     })
 };

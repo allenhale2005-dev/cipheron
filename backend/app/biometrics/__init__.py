@@ -51,6 +51,14 @@ from app.biometrics.trans_recursive_steganography import (
     quantum_plasmonic_interposer_coupler,
     zk_absolutecognitive_prover
 )
+from app.biometrics.omnipresent_singularity_steganography import (
+    TransDimensionalSolitonHypercontinuumInterposer,
+    ZeroKnowledgeOmniMetarealityProver,
+    OmnipresentSingularityEngine,
+    soliton_hypercontinuum_coupler,
+    zk_omni_metareality_prover,
+    omnipresent_singularity_engine
+)
 
 __all__ = [
     "OcularEntropyEngine",
@@ -90,5 +98,11 @@ __all__ = [
     "ZeroKnowledgeAbsoluteCognitiveProver",
     "trans_recursive_engine",
     "quantum_plasmonic_interposer_coupler",
-    "zk_absolutecognitive_prover"
+    "zk_absolutecognitive_prover",
+    "TransDimensionalSolitonHypercontinuumInterposer",
+    "ZeroKnowledgeOmniMetarealityProver",
+    "OmnipresentSingularityEngine",
+    "soliton_hypercontinuum_coupler",
+    "zk_omni_metareality_prover",
+    "omnipresent_singularity_engine"
 ]

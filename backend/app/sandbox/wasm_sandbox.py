@@ -1,6 +1,12 @@
 import time
 from typing import Dict, Any, List, Optional, Callable
-import wasmtime
+
+try:
+    import wasmtime
+    HAS_WASMTIME = True
+except ImportError:
+    wasmtime = None
+    HAS_WASMTIME = False
 
 ROT47_WAT = """
 (module
@@ -127,15 +133,29 @@ class SandboxedWASMPlugin:
         self.total_invocations = 0
 
         # Compile WAT to WASM bytecode
-        self.cfg = wasmtime.Config()
-        self.cfg.consume_fuel = True
-        self.engine = wasmtime.Engine(self.cfg)
-        self.wasm_bytes = wasmtime.wat2wasm(wat_source)
-        self.module = wasmtime.Module(self.engine, self.wasm_bytes)
+        if HAS_WASMTIME and wasmtime is not None:
+            self.cfg = wasmtime.Config()
+            self.cfg.consume_fuel = True
+            self.engine = wasmtime.Engine(self.cfg)
+            self.wasm_bytes = wasmtime.wat2wasm(wat_source)
+            self.module = wasmtime.Module(self.engine, self.wasm_bytes)
+        else:
+            self.cfg = None
+            self.engine = None
+            self.wasm_bytes = b""
+            self.module = None
 
     def execute(self, payload: str) -> Dict[str, Any]:
         start = time.perf_counter()
         self.total_invocations += 1
+
+        if not HAS_WASMTIME or self.engine is None:
+            return {
+                "success": False,
+                "error": "ERR_WASMTIME_UNAVAILABLE: wasmtime runtime is not installed in the environment",
+                "execution_time_ms": 0.0
+            }
+
         input_bytes = payload.encode('latin-1', errors='replace')
 
         # Enforce 16 MB linear memory limit

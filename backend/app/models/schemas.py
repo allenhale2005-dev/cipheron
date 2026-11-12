@@ -834,6 +834,72 @@ class ZKAbsoluteCognitiveVerifyRequest(BaseModel):
     proof: Dict[str, Any] = Field(description="zk-AbsoluteCognitive Goldilocks STARK-FRI proof object to verify")
 
 
+# --- 41. V32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY (suggestion-v31.md) ---
+
+class OmnipresentSingularityKeyRequest(BaseModel):
+    terahertz_burst_samples: List[float] = Field(
+        default=[4.2, -3.1, 5.5, -2.8, 4.8, -3.6, 5.1, -4.0],
+        description="Terahertz precursor neocortical micro-burst oscillations (10000Hz-25000Hz)"
+    )
+    pan_cortical_samples: List[float] = Field(
+        default=[1.5, -0.9, 1.8, -1.1, 1.6, -0.8, 1.7, -1.2],
+        description="Pan-cortical omni-hemispheric phase coherence signal (0.001Hz-60Hz)"
+    )
+
+class BellStateRetinalDecodeRequest(BaseModel):
+    tremor_signal: List[float] = Field(
+        default=[0.08, -0.22, 0.45, -0.58, 0.35, -0.42, 0.52, -0.31],
+        description="Bell-state entangled pan-retinal ocular tremor tensor signal (20Hz-500Hz)"
+    )
+
+class BellStateRetinalModulateRequest(BaseModel):
+    payload_text: str = Field(default="OMNIPRESENT", description="Secret payload text to modulate onto Bell-state tremor carrier")
+    carrier_freq_hz: float = Field(default=250.0, ge=20.0, le=500.0, description="Carrier frequency in Hz (20Hz-500Hz)")
+    duration_s: float = Field(default=0.5, ge=0.05, le=5.0, description="Signal duration in seconds")
+
+class OmnipresentSingularityPSDRequest(BaseModel):
+    terahertz_burst_samples: List[float] = Field(
+        default=[4.0, -3.0, 5.2, -2.5, 4.6, -3.2, 4.9, -3.8],
+        description="Terahertz precursor neocortical micro-burst oscillations (10000Hz-25000Hz)"
+    )
+    pan_cortical_samples: List[float] = Field(
+        default=[1.4, -0.8, 1.7, -1.0, 1.5, -0.7, 1.6, -1.1],
+        description="Pan-cortical omni-hemispheric phase coherence signal (0.001Hz-60Hz)"
+    )
+    phase_sync: float = Field(default=0.98, ge=-1.0, le=1.0, description="Omni-hemispheric phase coherence synchronization factor")
+
+class SolitonHypercontinuumDispersionRequest(BaseModel):
+    membrane_potential_uv: float = Field(
+        default=1650.0, ge=0.0, le=3300.0,
+        description="Neural membrane potential spike in microvolts for continuous metric-invariant soliton-hypercontinuum interposer"
+    )
+
+class OmnipresentMetarealityKeyDeriveRequest(BaseModel):
+    terahertz_burst_samples: List[float] = Field(
+        default=[4.5, -3.2, 5.8, -2.9, 4.9, -3.5],
+        description="Terahertz precursor neocortical burst samples (10000Hz-25000Hz)"
+    )
+    pan_cortical_samples: List[float] = Field(
+        default=[1.6, -0.9, 1.9, -0.8, 1.5, -1.0],
+        description="Pan-cortical omni-hemispheric coherence samples (0.001Hz-60Hz)"
+    )
+    hypercontinuum_phase: float = Field(default=12.566, description="Soliton-hypercontinuum interposer phase in radians")
+    dna_codon_stream: str = Field(default="ACGTACGTACGTACGTACGTACGTACGTACGT", description="Synthetic biological DNA codon strand")
+    pan_retinal_freq_hz: float = Field(default=250.0, ge=20.0, le=500.0, description="Bell-state pan-retinal ocular frequency in Hz")
+    salt: Optional[str] = Field(default=None, description="Optional custom trans-dimensional salt")
+
+class ZKOmniMetarealityProofRequest(BaseModel):
+    terahertz_cross_power: float = Field(default=96.4, ge=0.0, description="Terahertz precursor cross-spectral power")
+    hypercontinuum_phase: float = Field(default=12.566, description="Soliton-hypercontinuum interposer phase in radians")
+    pan_retinal_freq_hz: float = Field(default=250.0, ge=20.0, le=500.0, description="Pan-retinal ocular frequency in Hz")
+    dna_codons: str = Field(default="ACGTACGTACGTACGTACGTACGTACGTACGT", description="DNA codon witness strand")
+    user_identity: str = Field(default="OPERATOR_OMNIPRESENT_01", description="Operator identity seed")
+
+class ZKOmniMetarealityVerifyRequest(BaseModel):
+    proof: Dict[str, Any] = Field(description="zk-OmniMetareality Septenary STARK-FRI proof object to verify")
+
+
+
 
 
 

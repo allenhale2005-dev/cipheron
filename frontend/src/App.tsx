@@ -33,6 +33,7 @@ import { BioQuantumPage } from './pages/BioQuantumPage';
 import { OmniSynapticPage } from './pages/OmniSynapticPage';
 import { OmniCognitivePage } from './pages/OmniCognitivePage';
 import { AbsoluteCognitivePage } from './pages/AbsoluteCognitivePage';
+import { OmnipresentMetarealityPage } from './pages/OmnipresentMetarealityPage';
 import { SecurityMode, HardwareStatus } from './types';
 import { api } from './services/api';
 import { ShieldAlert, Terminal, Wifi, CheckCircle2 } from 'lucide-react';
@@ -208,6 +209,8 @@ export const App: React.FC = () => {
 
         {activeTab === 'trans-recursive' && <AbsoluteCognitivePage />}
 
+        {activeTab === 'omnipresent-metareality' && <OmnipresentMetarealityPage />}
+
         {activeTab === 'hardware' && (
           <HardwarePage
             hardwareStatus={hardwareStatus}
@@ -244,9 +247,9 @@ export const App: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <span className="text-slate-400">CIPHERON-X1 v26.0.0-ABSOLUTE BIO-COGNITIVE OMNI-SINGULARITY ARCHITECTURE &amp; UNIVERSAL SYNAPTIC CONTINUUM</span>
+            <span className="text-slate-400">CIPHERON-X1 v32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY ARCHITECTURE</span>
             <span className="hidden sm:inline text-slate-600">&bull;</span>
-            <span className="text-sky-400 hidden sm:inline">QUANTUM-PLASMONIC (10.0 Pbps/mm&sup2;) &amp; HIGH-GAMMA (250Hz) &amp; MULTI-SPECTRAL STEGANO &amp; 2048-BIT KEY</span>
+            <span className="text-indigo-400 hidden sm:inline">SOLITON-HYPERCONTINUUM (10.0 Zbps/mm&sup2;) &amp; TERAHERTZ (25000Hz) &amp; BELL-STATE STEGANO &amp; 131,072-BIT KEY</span>
             <span className="hidden sm:inline text-slate-600">&bull;</span>
             <span className="text-slate-400 hidden sm:inline">100/100 PRODUCTION GRADE</span>
           </div>

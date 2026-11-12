@@ -29,6 +29,7 @@ export type ActiveTab =
   | 'omni-synaptic'
   | 'omni-cognitive'
   | 'trans-recursive'
+  | 'omnipresent-metareality'
   | 'hardware'
   | 'code'
   | 'binary'
@@ -69,6 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange }
     { id: 'omni-synaptic', label: 'Omni-Synaptic Matrix', icon: Layers, badge: 'V24.0' },
     { id: 'omni-cognitive', label: 'Omni-Cognitive Singularity', icon: Atom, badge: 'V25.0' },
     { id: 'trans-recursive', label: 'Absolute Omni-Cognitive', icon: Atom, badge: 'V26.0' },
+    { id: 'omnipresent-metareality', label: 'Omnipresent Metareality', icon: Sparkles, badge: 'V32.0' },
     { id: 'hardware', label: 'ESP32 Hardware Lab', icon: Cpu, badge: 'OLED' },
     { id: 'code', label: 'Code Intelligence', icon: Code2, badge: 'AST' },
     { id: 'binary', label: 'Binary & Hashes', icon: Binary, badge: 'HEX' },

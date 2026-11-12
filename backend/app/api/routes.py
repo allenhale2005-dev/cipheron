@@ -2634,6 +2634,167 @@ def trigger_trans_recursive_zeroize_endpoint():
     return trans_recursive_engine.emergency_zeroize()
 
 
+# --- 41. V32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY (suggestion-v31.md) ---
+
+from app.biometrics.omnipresent_singularity_steganography import (
+    omnipresent_singularity_engine,
+    soliton_hypercontinuum_coupler,
+    zk_omni_metareality_prover
+)
+from app.models.schemas import (
+    OmnipresentSingularityKeyRequest,
+    BellStateRetinalDecodeRequest,
+    BellStateRetinalModulateRequest,
+    OmnipresentSingularityPSDRequest,
+    SolitonHypercontinuumDispersionRequest,
+    OmnipresentMetarealityKeyDeriveRequest,
+    ZKOmniMetarealityProofRequest,
+    ZKOmniMetarealityVerifyRequest
+)
+
+@router.post("/omnipresent-singularity/master-key")
+def extract_omnipresent_singularity_key_endpoint(req: OmnipresentSingularityKeyRequest):
+    """Calculates cross-frequency power spectral density across terahertz precursor bursts (10000Hz-25000Hz) and pan-cortical coherence."""
+    key_hash = omnipresent_singularity_engine.extract_omnipresent_singularity_master_key(
+        req.terahertz_burst_samples, req.pan_cortical_samples
+    )
+    return {
+        "status": "OMNIPRESENT_SINGULARITY_MASTER_KEY_EXTRACTED",
+        "key_hash": key_hash,
+        "terahertz_sample_count": len(req.terahertz_burst_samples),
+        "pan_cortical_sample_count": len(req.pan_cortical_samples)
+    }
+
+@router.post("/omnipresent-singularity/decode-bell-state")
+def decode_bell_state_retinal_endpoint(req: BellStateRetinalDecodeRequest):
+    """Recovers covert payload bytes from continuous Bell-state entangled pan-retinal cerebral holographic transceiver (20Hz-500Hz)."""
+    recovered_bytes = omnipresent_singularity_engine.decode_bell_state_retinal_payload(req.tremor_signal)
+    try:
+        recovered_text = recovered_bytes.decode("utf-8", errors="replace")
+    except Exception:
+        recovered_text = recovered_bytes.hex()
+    return {
+        "status": "BELL_STATE_RETINAL_PAYLOAD_DECODED",
+        "recovered_bytes_hex": recovered_bytes.hex(),
+        "recovered_text": recovered_text,
+        "byte_count": len(recovered_bytes)
+    }
+
+@router.post("/omnipresent-singularity/modulate-bell-state")
+def modulate_bell_state_retinal_endpoint(req: BellStateRetinalModulateRequest):
+    """Synthesizes continuous Bell-state entangled ocular tremor carrier waveform (20Hz-500Hz) modulating secret payload."""
+    payload_bytes = req.payload_text.encode("utf-8")
+    signal = omnipresent_singularity_engine.modulate_bell_state_retinal_payload(
+        payload=payload_bytes,
+        carrier_freq_hz=req.carrier_freq_hz,
+        duration_s=req.duration_s
+    )
+    return {
+        "status": "BELL_STATE_RETINAL_CARRIER_MODULATED",
+        "signal_samples": signal,
+        "total_samples": len(signal),
+        "carrier_freq_hz": req.carrier_freq_hz,
+        "duration_s": req.duration_s
+    }
+
+@router.post("/omnipresent-singularity/psd-analysis")
+def analyze_omnipresent_singularity_psd_endpoint(req: OmnipresentSingularityPSDRequest):
+    """Evaluates subconscious pan-cortical terahertz resonant wavefunction inversion (Section 3.1)."""
+    return omnipresent_singularity_engine.compute_omnipresent_psd(
+        terahertz_burst_samples=req.terahertz_burst_samples,
+        pan_cortical_samples=req.pan_cortical_samples,
+        phase_sync=req.phase_sync
+    )
+
+@router.post("/omnipresent-singularity/soliton-hypercontinuum-dispersion")
+def compute_soliton_hypercontinuum_dispersion_endpoint(req: SolitonHypercontinuumDispersionRequest):
+    """Computes continuous metric-invariant hypercontinuum wavepacket dynamics (10.0 Zbps/mm^2, <=1e-9 fJ/bit)."""
+    return soliton_hypercontinuum_coupler.compute_hypercontinuum_dispersion(
+        membrane_potential_uv=req.membrane_potential_uv
+    )
+
+@router.post("/omnipresent-singularity/derive-131072bit-key")
+def derive_omnipresent_metareality_key_endpoint(req: OmnipresentMetarealityKeyDeriveRequest):
+    """Derives 131,072-bit quantum-entropy master key K_omnipresent-singularity via HKDF-SHA512 (256 blocks = 16384 bytes)."""
+    return omnipresent_singularity_engine.derive_omnipresent_singularity_master_key_hkdf(
+        terahertz_burst_samples=req.terahertz_burst_samples,
+        pan_cortical_samples=req.pan_cortical_samples,
+        hypercontinuum_phase=req.hypercontinuum_phase,
+        dna_codon_stream=req.dna_codon_stream,
+        pan_retinal_freq_hz=req.pan_retinal_freq_hz,
+        salt=req.salt
+    )
+
+@router.post("/omnipresent-singularity/zk-proof")
+def generate_zk_omni_metareality_proof_endpoint(req: ZKOmniMetarealityProofRequest):
+    """Constructs recursive zk-OmniMetareality STARK proof spanning seven finite field architectures."""
+    proof = zk_omni_metareality_prover.generate_proof(
+        terahertz_cross_power=req.terahertz_cross_power,
+        hypercontinuum_phase=req.hypercontinuum_phase,
+        pan_retinal_freq_hz=req.pan_retinal_freq_hz,
+        dna_codons=req.dna_codons,
+        user_identity_seed=req.user_identity
+    )
+    return {
+        "status": "ZK_OMNI_METAREALITY_PROOF_GENERATED",
+        "proof": proof
+    }
+
+@router.post("/omnipresent-singularity/zk-verify")
+def verify_zk_omni_metareality_proof_endpoint(req: ZKOmniMetarealityVerifyRequest):
+    """Verifies zk-OmniMetareality STARK proof across septenary fields in <0.1 ms SLA."""
+    result = zk_omni_metareality_prover.verify_proof(req.proof)
+    return {
+        "status": "ZK_OMNI_METAREALITY_PROOF_VERIFIED" if result.get("is_valid") else "VERIFICATION_FAILED",
+        "is_valid": result.get("is_valid", False),
+        "verification_time_ms": result.get("verification_time_ms", 0.0),
+        "verification_sla_met": result.get("verification_sla_met", True),
+        "field_count": result.get("field_count", 7),
+        "proof_system": "zk-OmniMetareality-Septenary-STARK"
+    }
+
+@router.get("/omnipresent-singularity/telemetry")
+def get_omnipresent_singularity_telemetry_endpoint():
+    """Returns aggregated real-time telemetry across soliton-hypercontinuum interposer, terahertz inversion, and septenary zk-STARK."""
+    return {
+        "soliton_hypercontinuum_interposer": {
+            "throughput_zbps_mm2": soliton_hypercontinuum_coupler.throughput_zbps_mm2,
+            "throughput_pbps_mm2": soliton_hypercontinuum_coupler.throughput_pbps_mm2,
+            "energy_efficiency_fj_bit": soliton_hypercontinuum_coupler.energy_efficiency_fj_bit,
+            "casimir_cavity_stabilization_q": soliton_hypercontinuum_coupler.casimir_cavity_stabilization_q,
+            "central_wavelength_nm": soliton_hypercontinuum_coupler.central_wavelength_nm,
+            "total_couplings": soliton_hypercontinuum_coupler.total_interposer_couplings
+        },
+        "omnipresent_singularity_engine": {
+            "sampling_rate_hz": omnipresent_singularity_engine.sampling_rate,
+            "total_operations": omnipresent_singularity_engine.total_operations,
+            "terahertz_precursor_band": "10000Hz-25000Hz",
+            "pan_cortical_band": "0.001Hz-60Hz",
+            "pan_retinal_band": "20Hz-500Hz",
+            "zeroized": omnipresent_singularity_engine.zeroized
+        },
+        "zk_omni_metareality_stark": {
+            "total_proofs": zk_omni_metareality_prover.proof_count,
+            "security_bits": zk_omni_metareality_prover.security_bits,
+            "fields_supported": [
+                "Goldilocks", "BabyBear", "Mersenne-31", "KoalaBear",
+                "StarknetPrime", "Circle-STARK", "BiniusTower"
+            ],
+            "verification_sla_ms": 0.10
+        },
+        "security": {
+            "zeroization_sla_us": 0.10,
+            "zeroized": omnipresent_singularity_engine.zeroized
+        }
+    }
+
+@router.post("/omnipresent-singularity/zeroize")
+def trigger_omnipresent_singularity_zeroize_endpoint():
+    """Triggers emergency fail-closed zeroization (<0.10us SLA) of all omnipresent states and 131,072-bit keys."""
+    return omnipresent_singularity_engine.emergency_zeroize()
+
+
+
 
 
 

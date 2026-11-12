@@ -1159,4 +1159,159 @@ export interface TransRecursiveZeroizeResult {
   fail_closed_confirmed: boolean;
 }
 
+// V32.0 Absolute Omnipresent Metareality Singularity Types (suggestion-v31.md)
+export interface OmnipresentSingularityState {
+  membranePotentialUv: number;
+  hypercontinuumPhaseRad: number;
+  diamondoidPermittivity: number;
+  solitonPropagationLengthUm: number;
+  throughputZbps: number;
+  energyEfficiencyFj: number;
+  interposerLocked: boolean;
+  terahertzCenterHz: number;
+  panCorticalCenterHz: number;
+  phaseSync: number;
+  terahertzCrossPower: number;
+  entropyDensityBits: number;
+  omnipresentKeyHash: string;
+  dnaCodons: string;
+  carrierFreqHz: number;
+  panRetinalFreqHz: number;
+  stegoPayload: string;
+  recoveredPayload: string;
+  masterKeyHex: string;
+  zkCommitment: string;
+  friLayers: string[];
+  septenaryFields: Record<string, string>;
+  zeroized: boolean;
+  zeroizeLatencyUs: number;
+}
+
+export interface OmnipresentSingularityTelemetry {
+  soliton_hypercontinuum_interposer: {
+    throughput_zbps_mm2: number;
+    throughput_pbps_mm2: number;
+    energy_efficiency_fj_bit: number;
+    casimir_cavity_stabilization_q: number;
+    central_wavelength_nm: number;
+    total_couplings: number;
+  };
+  omnipresent_singularity_engine: {
+    sampling_rate_hz: number;
+    total_operations: number;
+    terahertz_precursor_band: string;
+    pan_cortical_band: string;
+    pan_retinal_band: string;
+    zeroized: boolean;
+  };
+  zk_omni_metareality_stark: {
+    total_proofs: number;
+    security_bits: number;
+    fields_supported: string[];
+    verification_sla_ms: number;
+  };
+  security: {
+    zeroization_sla_us: number;
+    zeroized: boolean;
+  };
+}
+
+export interface SolitonHypercontinuumDispersionResult {
+  membrane_potential_uv: number;
+  diamondoid_lattice_permittivity: number;
+  quantum_foam_permittivity: string;
+  hypercontinuum_wavevector_real: number;
+  hypercontinuum_phase_rad: number;
+  soliton_propagation_length_um: number;
+  throughput_zbps_mm2: number;
+  energy_efficiency_fj_bit: number;
+  casimir_cavity_stabilization_q: number;
+  status: string;
+}
+
+export interface OmnipresentSingularityKeyResult {
+  status: string;
+  key_hash: string;
+  terahertz_sample_count: number;
+  pan_cortical_sample_count: number;
+}
+
+export interface OmnipresentSingularityPSDResult {
+  sampling_rate_hz: number;
+  terahertz_precursor_band: string;
+  pan_cortical_band: string;
+  pan_retinal_band: string;
+  phase_synchronization: number;
+  terahertz_cross_power: number;
+  entropy_density_bits: number;
+  resonance_inversion_status: string;
+}
+
+export interface BellStateRetinalDecodeResult {
+  status: string;
+  recovered_bytes_hex: string;
+  recovered_text: string;
+  byte_count: number;
+}
+
+export interface BellStateRetinalModulateResult {
+  status: string;
+  signal_samples: number[];
+  total_samples: number;
+  carrier_freq_hz: number;
+  duration_s: number;
+}
+
+export interface OmnipresentMetarealityKeyDeriveResult {
+  valid: boolean;
+  status: string;
+  key_hex_preview: string;
+  key_hex: string;
+  key_bytes_len: number;
+  key_bits_len: number;
+  zk_commitment: string;
+  entropy_density_bits: number;
+  terahertz_cross_power: number;
+  dna_codon_stream: string;
+  pan_retinal_freq_hz: number;
+  hypercontinuum_phase: number;
+}
+
+export interface ZKOmniMetarealityProofResult {
+  status: string;
+  proof: {
+    proof_id: string;
+    state_commitment: string;
+    septenary_fields: Record<string, string>;
+    fri_layers: string[];
+    security_margin_bits: number;
+    verification_sla_ms: number;
+    generation_time_ms: number;
+    terahertz_verified: boolean;
+    hypercontinuum_verified: boolean;
+    pan_retinal_verified: boolean;
+    verified: boolean;
+    timestamp: number;
+  };
+}
+
+export interface ZKOmniMetarealityVerifyResult {
+  status: string;
+  is_valid: boolean;
+  verification_time_ms: number;
+  verification_sla_met: boolean;
+  field_count: number;
+  proof_system: string;
+}
+
+export interface OmnipresentZeroizeResult {
+  status: string;
+  shred_passes: string[];
+  zeroization_latency_us: number;
+  sla_target_us: number;
+  sla_met: boolean;
+  fail_closed_confirmed: boolean;
+}
+
+
 
