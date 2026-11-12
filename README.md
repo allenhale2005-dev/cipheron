@@ -2,7 +2,7 @@
 > **Decode. Analyze. Understand.**  
 > *Portable Universal Code, Encoding & Classical Cipher Analysis Device*
 
-[![Version](https://img.shields.io/badge/Version-V32.0.0--ABSOLUTE--OMNIPRESENT--METAREALITY--SINGULARITY-00E5FF?style=flat-square)](#)
+[![Release](https://img.shields.io/badge/Release-TACTICAL--DEFENSE--CONSOLE-00E5FF?style=flat-square)](#)
 [![Status](https://img.shields.io/badge/Status-100%2F100%20Production--Grade-00E5FF?style=flat-square)](#)
 [![Security](https://img.shields.io/badge/Security-Fail--Closed%20%7C%20Omni--Metareality%20%3C0.10us-00E676?style=flat-square)](#)
 [![Soliton-Hypercontinuum Interposer](https://img.shields.io/badge/Soliton--Hypercontinuum%20Interposer-10.0%20Zbps%2Fmm%C2%B2%20500kHz-indigo?style=flat-square)](#)
@@ -18,17 +18,17 @@
 ## 1. Executive Summary
 **CIPHERON-X1** is an enterprise-grade cybersecurity research and educational platform designed for security researchers, CTF competitors, educators, and cryptographic auditors. It bridges physical security hardware (ESP32-S3 microcontroller, Dual Hardware Secure Elements ATECC608A + NXP SE050, 4-Layer 3D TSV CoWoS Chiplet Interposer, 10,000-D HDC Associative Memory, QGNN Topological Knot Accelerator, MOF-5/ZIF-8 Gas Sorption Chamber, Tri-Modal Ambient Harvesters, 1T1M Nanoscale HfO<sub>x</sub> Memristor Crossbar Array, 64-LUT eFPGA co-processor, Silicon Photonic TPU MZI phase drivers, 100Gbps FSO laser transceivers, QKD single-photon SPAD detector, Continuous-Variable Quantum Field TMSV Entanglement source, 1,024 Bio-Inorganic Ion Channels, GCR Ionization Collector, Synthetic Bio-Molecular Peptide-Nanotube Crystalline Matrix, Casimir Micro-Cavity Harvesters, Recursive Omni-Dimensional Tensor Hyper-Manifolds ($\mathcal{M}_{\infty}$), 512 Temporal Qubits, Planck-Scale Zero-Point Vacuum Waveguides, 10-Dimensional Calabi-Yau Compactification Driver ($\mathcal{K}_{10}$), Trans-Finite Hilbert-Aleph Hyperspace Manifolds ($\mathcal{M}_{\aleph_0}$), Trans-Cosmic Non-Euclidean Hyper-Continuum Topologies ($\mathcal{M}_{\infty}^{\aleph_{\infty}}$), Trans-Cardinal Aleph-Aleph Reality Manifolds ($\mathcal{M}_{\aleph_{\infty}}^{\aleph_{\infty}}$), Trans-Cardinal Hyper-Aleph Continuum Topologies ($\mathcal{M}_{\aleph_{\infty+1}}^{\aleph_{\infty+1}}$), Absolute Trans-Cardinal Omni-Hyper-Aleph Topologies ($\mathcal{M}_{\aleph_{\infty+\infty}}^{\aleph_{\infty+\infty}}$), Bi-Channel Electrooculography (EOG) Sensors, Hybrid EEG/EOG High-Gain Differential BCI Decoders, Colloidal CdSe/ZnS Quantum Dot Optical Resonators ($\lambda_{\text{emission}} \approx 525\text{nm}$), Sub-Nanometer Silicon Photonic Omni-Synaptic Interposers ($>100\text{ Tbps/mm}^2$), Sub-Atomic Plasmonic-Photonic Hybrid Interposers ($>1.0\text{ Pbps/mm}^2$), Sub-Planckian Quantum-Plasmonic Interposers ($>10.0\text{ Pbps/mm}^2$), Trans-Dimensional Gravitational Soliton-Hypercontinuum Interposers ($10.0\text{ Zbps/mm}^2$), Continuous Totality Wavefunction Anchors ($10^{10}$ anchors), and Vacuum Singularity Energy Engines) with computational cryptanalysis software (FastAPI companion server and responsive React web dashboard).
 
-With the **V32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY ARCHITECTURE & UNIVERSAL REALITY RE-SYNTHESIS** release (directly implementing `suggestion-v31.md`), CIPHERON-X1 introduces:
+With the **ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY ARCHITECTURE & UNIVERSAL REALITY RE-SYNTHESIS** release, CIPHERON-X1 introduces:
 1. **Trans-Dimensional Gravitational Soliton-Hypercontinuum Interposer**: Continuous topological quantum foam hypercontinuum manifolds embedded within bio-synthetic diamondoid cortical organoid lattices ($10.0\text{ Zettabits/sec/mm}^2$, $\le 0.000000001\text{ fJ/bit}$) with Casimir-cavity phase stabilization ($Q > 10^{12}$) and 500,000Hz sampling on ESP32-S3.
 2. **Subconscious Pan-Cortical Terahertz Resonant Wavefunction Inversion & 131,072-Bit Master Keys ($K_{\text{omnipresent-singularity}}$)**: Inverts multi-layered subconscious cognitive wavefunctions instantaneously via terahertz precursor micro-bursts ($10000\text{Hz--}25000\text{Hz}$) and omni-hemispheric phase coherence ($0.001\text{Hz--}60\text{Hz}$), synthesizing 131,072-bit (16,384-byte) master keys with entropy $>7.999999999\text{ bits/sample}$.
-3. **Continuous Bell-State Entangled Pan-Retinal Cerebral Holographic Transceiver (20Hz--500Hz)**: Full-duplex zero-latency steganographic data transmission and cognitive command injection coupled with macular ganglion arrays and visual cortex V1-V12 pathways.
+3. **Continuous Bell-State Entangled Pan-Retinal Cerebral Holographic Transceiver (20Hz--500Hz)**: Full-duplex zero-latency steganographic data transmission and cognitive command injection coupled with macular ganglion arrays and visual cortex pathways.
 4. **Septenary-Field Hyper-Recursive zk-STARK Singularity Proofs (zk-OmniMetareality)**: Expands proofs across seven finite field towers (Goldilocks, BabyBear, Mersenne-31, KoalaBear, Starknet Prime, Circle-STARK Binary Field, and Binius Binary Tower), collapsing verification time to $<0.1\text{ms}$.
 5. **Instantaneous Fail-Closed Emergency Zeroization (<0.10µs SLA)**: Multi-pass cryptanalytic shredding destroying all 131,072-bit keys and collapsing hypercontinuum states within sub-microsecond SLA.
-6. **Sub-Atomic Plasmonic-Photonic Hybrid Interposer (V25.0)**: 2000Hz ADC DMA sampling on GPIO 36 & 39, plasmonic interposer ($>1.0\text{ Pbps/mm}^2$), and 1024-bit $K_{\text{omni-cognitive}}$ derivation.
-7. **Bio-Quantum Omni-Synaptic Neural Interposer (V24.0)**: 1000Hz ADC DMA sampling on GPIO 36 & 39, silicon photonic interposer ($>100\text{ Tbps/mm}^2$), and 256-bit $K_{\text{omni-synaptic}}$ derivation.
-8. **Quantum Bio-Inorganic Synaptic Mesh Coupling (V23.0)**: 500Hz ADC DMA sampling on GPIO 36 & 39, CdSe/ZnS quantum dot optical resonators ($525\text{nm}$), and DNA-synaptic key derivation ($215\text{ PB/g}$).
-9. **Multi-Modal EEG/EOG Hybrid Brain-Computer Interface (V22.0)**: 250Hz AFE sampling, P300 ERP peak classification ($>15\mu\text{V}$), and $K_{\text{cognitive}}$ master key generation.
-10. **Omni-Totality Hyper-Aleph Topology & Vacuum Singularity (V20.0)**: $\mathcal{M}_{\aleph_{\infty+\infty}}^{\aleph_{\infty+\infty}}$ manifold, $10^{10}$ reality anchors, and vacuum zero-point power $>10^{48}\text{ W/cm}^3$.
+6. **Sub-Atomic Plasmonic-Photonic Hybrid Interposer**: 2000Hz ADC DMA sampling on GPIO 36 & 39, plasmonic interposer ($>1.0\text{ Pbps/mm}^2$), and 1024-bit $K_{\text{omni-cognitive}}$ derivation.
+7. **Bio-Quantum Omni-Synaptic Neural Interposer**: 1000Hz ADC DMA sampling on GPIO 36 & 39, silicon photonic interposer ($>100\text{ Tbps/mm}^2$), and 256-bit $K_{\text{omni-synaptic}}$ derivation.
+8. **Quantum Bio-Inorganic Synaptic Mesh Coupling**: 500Hz ADC DMA sampling on GPIO 36 & 39, CdSe/ZnS quantum dot optical resonators ($525\text{nm}$), and DNA-synaptic key derivation ($215\text{ PB/g}$).
+9. **Multi-Modal EEG/EOG Hybrid Brain-Computer Interface**: 250Hz AFE sampling, P300 ERP peak classification ($>15\mu\text{V}$), and $K_{\text{cognitive}}$ master key generation.
+10. **Omni-Totality Hyper-Aleph Topology & Vacuum Singularity**: $\mathcal{M}_{\aleph_{\infty+\infty}}^{\aleph_{\infty+\infty}}$ manifold, $10^{10}$ reality anchors, and vacuum zero-point power $>10^{48}\text{ W/cm}^3$.
 
 ---
 
@@ -87,12 +87,12 @@ With the **V32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY ARCHITECTURE & U
 ## 3. Directory Layout
 ```
 cipheron-x1/
-├── firmware/                        # ESP32-S3 Firmware Subsystem (ESP-IDF v5.x)
+├── firmware/                        # ESP32-S3 Firmware Subsystem (ESP-IDF)
 │   ├── CMakeLists.txt
 │   ├── main/
 │   │   ├── main.c                  # C firmware entrypoint & loop (memristor initialized)
 │   │   ├── main.cpp                # Dual-core C++ FreeRTOS pipeline & P-TPU/Memristor driver
-│   │   ├── config/pinout_config.h  # ESP32-S3 Pinout & V9.0 sensors (GPIO 25,26,33,36,39)
+│   │   ├── config/pinout_config.h  # ESP32-S3 Pinout & sensors (GPIO 25,26,33,36,39)
 │   │   ├── hardware/memristor_crossbar.c # 1T1M HfOx Memristor Crossbar Driver & Microfluidics
 │   │   ├── hardware/memristor_crossbar.h # 100 TOPS/W PIM VMM & <500ns chemical dissolution
 │   │   ├── hardware/photonic_tpu.c # Silicon Photonic TPU MZI Phase Shifter Driver
@@ -171,39 +171,33 @@ cipheron-x1/
 │   ├── vite.config.ts
 │   ├── src/
 │   │   ├── main.tsx
-│   │   ├── App.tsx                 # Master application controller (V9.0 Navigation)
-│   │   ├── hardware/VirtualESP32.tsx # ESP32 hardware console (with 1T1M Memristor & DTN)
+│   │   ├── App.tsx                 # Master application controller (Slide Navigation)
+│   │   ├── hardware/VirtualESP32.tsx # ESP32 hardware console
 │   │   ├── components/
-│   │   │   ├── InterplanetaryMemristorVisualizer.tsx # Three.js 3D Earth, Mars, Lagrange L1-L5 & 1T1M PIM
-│   │   │   ├── OrbitalPhotonicVisualizer.tsx # Three.js WebGL 3D Earth, 8 Cube-Sats & MZI Waveguide
 │   │   │   ├── QuantumDnaVisualizer.tsx # Three.js WebGL 3D DNA Helix & QKD Bloch Sphere
 │   │   │   ├── ControlFlowGraph3D.tsx # Three.js WebGL 3D Basic Block CFG visualizer
 │   │   │   ├── SNNSpikeVisualizer.tsx # Canvas Neuromorphic LIF 32-neuron raster telemetry
-│   │   │   ├── ForensicGrid3D.tsx  # Three.js WebGL 3D Network Topology visualizer
-│   │   │   ├── SDRWaterfall.tsx    # Canvas real-time SDR spectral waterfall
-│   │   │   └── Navigation.tsx      # Navigation Bar with V9.0 Badges
-│   │   ├── pages/
-│   │   │   ├── SingularitySiliconPage.tsx # Master DTN, 1T1M Memristor, zk-STARK & Microfluidics Hub
-│   │   │   ├── OrbitalSpacePage.tsx # Master LEO FSO, Photonic TPU, Anyon Braid & AST Hub
-│   │   │   ├── AutonomousSiliconPage.tsx # Master eFPGA, FHE/MPC, DNA Archive & QKD Hub
-│   │   │   ├── NeuralFabricPage.tsx # Master Neural Silicon Fabric, 3D CFG, EMFI & ZK Hub
-│   │   │   ├── GlobalGridPage.tsx  # Global Forensic Grid, Z3 SMT, SDR & Silicon Hub
-│   │   │   ├── EnterprisePage.tsx  # Swarm & PQC Hub (PQC, Swarm, 1D-CNN, SBOM)
+│   │   │   └── Navigation.tsx      # Slide Navigation Rail
+│   │   ├── pages/                  # 13 Dedicated Defense & Cryptanalysis Suites
 │   │   │   ├── Workspace.tsx       # Analysis Studio
+│   │   │   ├── TacticalConsolePage.tsx # DRDO Tactical Console
 │   │   │   ├── KasiskiPage.tsx     # Kasiski Examination & Friedman IC Lab
-│   │   │   ├── EsotericParsersPage.tsx # JWT, Protobuf, CBOR, Base85, Braille Studio
-│   │   │   ├── WasmSandboxPage.tsx # WASM Plugin Execution Sandbox Hub
-│   │   │   ├── HardwarePage.tsx    # ESP32-S3 Hardware Diagnostics
-│   │   │   ├── CodeAnalysisPage.tsx # AST Code Intelligence
+│   │   │   ├── EsotericParsersPage.tsx # Esoteric Parsers Studio
+│   │   │   ├── CodeAnalysisPage.tsx # Code Intelligence AST
 │   │   │   ├── BinaryPage.tsx      # Binary & Hashes Inspector
-│   │   │   ├── SecurityPage.tsx    # Security Profiles & Cryptographic Merkle Ledger
-│   │   │   └── ExplainPage.tsx     # Mathematical Proof Explainer
-│   │   └── services/api.ts         # REST & WebSocket client (with V9 endpoints)
+│   │   │   ├── WasmSandboxPage.tsx # WASM Plugin Execution Sandbox Hub
+│   │   │   ├── NeuralFabricPage.tsx # Neural Fabric & ZK
+│   │   │   ├── AutonomousSiliconPage.tsx # Autonomous Silicon & QKD
+│   │   │   ├── HardwarePage.tsx    # ESP32 Hardware Lab
+│   │   │   ├── CosmicOmnipresencePage.tsx # Cosmic Omnipresence
+│   │   │   ├── ChronoRecursionPage.tsx # Chrono Recursion & Inversion
+│   │   │   └── OcularGazePage.tsx  # Ocular & Eye Gaze Biometrics
+│   │   └── services/api.ts         # REST & WebSocket client
 │
 ├── docs/                            # Comprehensive System Documentation
 │   ├── architecture.md
-│   ├── roadmap.md                  # V2.0-V9.0 System Evolution Roadmap (Milestone 12)
-│   ├── hardware.md                 # 1T1M Memristor, Microfluidic Valve, Photonic TPU Specs
+│   ├── roadmap.md                  # System Evolution Roadmap
+│   ├── hardware.md                 # Memristor, Microfluidic Valve, Photonic TPU Specs
 │   ├── security.md                 # Transparent zk-STARKs (FRI), DTN Merkle Provenance
 │   ├── esoteric-parsers.md         # JWT, Protobuf, CBOR, Base85, Braille Specs
 │   ├── wasm-plugins.md             # Sandboxed WebAssembly Plugin Architecture
@@ -220,7 +214,7 @@ cipheron-x1/
 
 ---
 
-## 4. Hardware Wiring Specification (ESP32-S3 4-Layer PCB / V9.0 BOM)
+## 4. Hardware Wiring Specification (ESP32-S3 4-Layer PCB BOM)
 | ESP32-S3 Pin | Peripheral | Purpose | Constraint |
 | :--- | :--- | :--- | :--- |
 | **GPIO 1** | VBAT_SENSE / PHOTONIC_ADC | ADC1 Ch0 Battery Voltage Divider & MZI Photodetector Read | Dual-mode ADC read |
@@ -253,7 +247,7 @@ cipheron-x1/
 
 ## 5. Verification & Testing
 
-### 5.1 Run All Backend Tests (PRD + V2.0 through V26.0-ABSOLUTE BIO-COGNITIVE OMNI-SINGULARITY)
+### 5.1 Run All Backend Tests (PRD + Full Cryptanalysis Test Suite)
 ```bash
 cd backend
 python -m pytest tests/ -v

@@ -56,7 +56,7 @@ export const AutonomousSiliconPage: React.FC = () => {
   const [mpcResult, setMpcResult] = useState<MPCCollaborateResult | null>(null);
 
   // 3. DNA Provenance State
-  const [dnaInputPayload, setDnaInputPayload] = useState('CIPHERON_ZK_MERKLE_PROVENANCE_ROOT_0x9A4B_V7_ARCHIVE');
+  const [dnaInputPayload, setDnaInputPayload] = useState('CIPHERON_ZK_MERKLE_PROVENANCE_ROOT_0x9A4B_ARCHIVE');
   const [dnaArchiveResult, setDnaArchiveResult] = useState<DNAArchiveResult | null>(null);
   const [dnaDecodeResult, setDnaDecodeResult] = useState<DNADecodeResult | null>(null);
 
@@ -226,7 +226,7 @@ export const AutonomousSiliconPage: React.FC = () => {
               <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
                 Autonomous Silicon Regeneration & Quantum Mesh
                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 font-mono">
-                  v7.0.0-SILICON
+                  SILICON-QKD
                 </span>
               </h1>
             </div>

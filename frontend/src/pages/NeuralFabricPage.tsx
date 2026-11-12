@@ -177,7 +177,7 @@ export const NeuralFabricPage: React.FC = () => {
               <h1 className="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
                 Neural-Quantum Silicon Fabric & ZK Provenance
                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-mono">
-                  v6.0.0-FABRIC
+                  NEURAL-FABRIC
                 </span>
               </h1>
             </div>

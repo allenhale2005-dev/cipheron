@@ -68,7 +68,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'kasiski',
     label: 'Kasiski & IC Lab',
     icon: BarChart3,
-    badge: 'V2.0',
+    badge: 'IC-LAB',
     category: 'ANALYSIS',
     description: 'Polyalphabetical IOC and Friedman distance analyzer'
   },
@@ -110,7 +110,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'neural-fabric',
     label: 'Neural Fabric & ZK',
     icon: Brain,
-    badge: 'V6.0',
+    badge: 'FABRIC',
     category: 'COMPUTE',
     description: 'Neuromorphic SNN LIF event mesh and Plonk BN254 zero-knowledge proofs'
   },
@@ -118,7 +118,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'quantum-silicon',
     label: 'Autonomous Silicon & QKD',
     icon: Atom,
-    badge: 'V7.0',
+    badge: 'SILICON',
     category: 'COMPUTE',
     description: 'BB84/E91 quantum key distribution and eFPGA dynamic reconfiguration'
   },
@@ -136,7 +136,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'ocular-gaze',
     label: 'Ocular & Eye-Gaze Biometrics',
     icon: Eye,
-    badge: 'V21.0',
+    badge: 'OCULAR',
     category: 'BIOMETRICS & TIME',
     description: 'Involuntary micro-saccadic eye tracking and gaze-Markov steganography'
   },
@@ -144,7 +144,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'chrono-recursion',
     label: 'Chrono-Recursion & Inversion',
     icon: History,
-    badge: 'V14.0',
+    badge: 'CHRONO',
     category: 'BIOMETRICS & TIME',
     description: '512-temporal qubit chronological entropy inversion engine'
   },
@@ -152,7 +152,7 @@ export const TACTICAL_TABS: NavItem[] = [
     id: 'cosmic-omnipresence',
     label: 'Cosmic Omnipresence',
     icon: Globe2,
-    badge: 'V13.0',
+    badge: 'COSMIC',
     category: 'BIOMETRICS & TIME',
     description: 'Quantum foam topological wavepacket continuum monitoring'
   }

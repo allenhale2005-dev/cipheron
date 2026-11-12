@@ -119,7 +119,7 @@ export const KasiskiPage: React.FC = () => {
           }`}
         >
           <Columns className="w-4 h-4" />
-          <span>Columnar Transposition (V3.0)</span>
+          <span>Columnar Transposition</span>
         </button>
 
         <button
@@ -131,7 +131,7 @@ export const KasiskiPage: React.FC = () => {
           }`}
         >
           <Globe className="w-4 h-4" />
-          <span>Multilingual IC Profiler (V3.0)</span>
+          <span>Multilingual IC Profiler</span>
         </button>
       </div>
 

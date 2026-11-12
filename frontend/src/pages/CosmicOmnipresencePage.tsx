@@ -18,7 +18,7 @@ import {
 
 export const CosmicOmnipresencePage: React.FC = () => {
   // Holographic Tensor State
-  const [bulkStatePayload, setBulkStatePayload] = useState('COSMIC_BULK_5D_CRYPTANALYTIC_STATE_VECTOR_V13');
+  const [bulkStatePayload, setBulkStatePayload] = useState('COSMIC_BULK_5D_CRYPTANALYTIC_STATE_VECTOR');
   const [tensorResult, setTensorResult] = useState<any>(null);
   const [isContracting, setIsContracting] = useState(false);
   const [holoTelemetry, setHoloTelemetry] = useState<any>(null);
@@ -217,7 +217,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <h1 className="text-xl font-bold font-mono text-white">COSMIC OMNIPRESENCE ARCHITECTURE</h1>
                 <span className="px-2 py-0.5 text-[10px] font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 rounded">
-                  V13.0 PRODUCTION
+                  PRODUCTION
                 </span>
               </div>
               <p className="text-xs font-mono text-slate-400">

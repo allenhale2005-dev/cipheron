@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="flex items-center space-x-2">
                 <h1 className="font-mono text-xl font-bold tracking-wider text-white">CIPHERON-X1</h1>
                 <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#232B3E] text-slate-300 border border-slate-700">
-                  HW-v1.0
+                  ONLINE
                 </span>
               </div>
               <p className="text-xs text-slate-400 hidden sm:block">Universal Code, Encoding & Classical Cipher Analysis Device</p>

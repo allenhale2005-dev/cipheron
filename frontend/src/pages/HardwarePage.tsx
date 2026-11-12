@@ -26,14 +26,14 @@ export const HardwarePage: React.FC<HardwarePageProps> = ({
             </h2>
           </div>
           <p className="text-xs text-slate-400 font-mono mt-1">
-            Simulated / Physical Hardware Subsystem adhering to ESP-IDF v5.x Specifications
+            Simulated / Physical Hardware Subsystem adhering to ESP-IDF Specifications
           </p>
         </div>
 
         <div className="flex items-center space-x-2 text-xs font-mono">
           <span className="flex items-center space-x-1 px-3 py-1.5 rounded bg-[#0B0F17] text-[#00E676] border border-[#232B3E]">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Secure Boot v2 Verified</span>
+            <span>Secure Boot Verified</span>
           </span>
           <span className="flex items-center space-x-1 px-3 py-1.5 rounded bg-[#0B0F17] text-[#00E5FF] border border-[#232B3E]">
             <HardDrive className="w-3.5 h-3.5" />

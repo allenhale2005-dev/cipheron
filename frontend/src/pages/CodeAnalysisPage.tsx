@@ -51,7 +51,7 @@ class CipherSession:
 
         <span className="text-xs font-mono px-3 py-1.5 rounded bg-emerald-500/10 text-[#00E676] border border-emerald-500/30 flex items-center space-x-1.5">
           <ShieldCheck className="w-4 h-4" />
-          <span>V1 Sandboxed Static Policy</span>
+          <span>Sandboxed Static Policy</span>
         </span>
       </div>
 

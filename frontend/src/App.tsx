@@ -191,7 +191,7 @@ export const App: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <span className="text-slate-400">CIPHERON-X1 v32.0.0 TACTICAL CONSOLE</span>
+              <span className="text-slate-400">CIPHERON-X1 TACTICAL CONSOLE</span>
               <span className="hidden sm:inline text-slate-600">&bull;</span>
               <span className="text-sky-400 hidden sm:inline">13 DEDICATED CRYPTANALYSIS &amp; HARDWARE SUITES</span>
               <span className="hidden sm:inline text-slate-600">&bull;</span>

@@ -236,7 +236,7 @@ export const OcularGazePage: React.FC = () => {
                 OCULAR &amp; EYE-GAZE BIOMETRIC CODING &amp; DECODING SYSTEM
               </h1>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30">
-                V21.0-PRODUCTION
+                PRODUCTION
               </span>
             </div>
             <p className="text-xs text-slate-400 font-mono max-w-4xl">

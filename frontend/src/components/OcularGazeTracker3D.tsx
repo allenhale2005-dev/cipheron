@@ -185,7 +185,7 @@ export const OcularGazeTracker3D: React.FC<OcularGazeTracker3DProps> = ({
       <div className="absolute top-4 left-4 z-10 bg-slate-900/90 backdrop-blur-md p-3 rounded-lg border border-sky-500/20 text-sky-400 text-xs font-mono flex flex-col space-y-1">
         <div className="font-bold flex items-center space-x-2">
           <span className="w-2 h-2 rounded-full bg-sky-400 animate-ping" />
-          <span>OCULAR SYSTEM V21.0 — EOG BIOSIGNAL: ACTIVE</span>
+          <span>OCULAR SYSTEM — EOG BIOSIGNAL: ACTIVE</span>
         </div>
         <div className="text-slate-400 text-[11px]">
           GAZE: <span className="text-sky-300 font-bold">{gazeDirection}</span> | PUPIL ENTROPY: <span className="text-emerald-400 font-bold">{pupilEntropy.toFixed(2)} BITS/BYTE</span>

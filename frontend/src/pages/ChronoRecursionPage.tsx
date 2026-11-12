@@ -19,7 +19,7 @@ import {
 
 export const ChronoRecursionPage: React.FC = () => {
   // Tensor Contraction State
-  const [hyperVectorInput, setHyperVectorInput] = useState('SINGULARITY_RECURSIVE_HYPER_MANIFOLD_PAYLOAD_V14');
+  const [hyperVectorInput, setHyperVectorInput] = useState('SINGULARITY_RECURSIVE_HYPER_MANIFOLD_PAYLOAD');
   const [tensorResult, setTensorResult] = useState<any>(null);
   const [isContracting, setIsContracting] = useState(false);
   const [omniTelemetry, setOmniTelemetry] = useState<any>(null);
@@ -224,7 +224,7 @@ export const ChronoRecursionPage: React.FC = () => {
               <div className="flex items-center space-x-2">
                 <h1 className="text-xl font-bold font-mono text-white">SINGULARITY OMNI-RECURSION ARCHITECTURE</h1>
                 <span className="px-2 py-0.5 text-[10px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/40 rounded">
-                  V14.0 PRODUCTION
+                  PRODUCTION
                 </span>
               </div>
               <p className="text-xs font-mono text-slate-400">

@@ -134,7 +134,7 @@ export interface HardwareStatus {
   battery_mv: number;
 }
 
-// --- Roadmap V2.0 Interfaces ---
+// --- Parser & Inspector Interfaces ---
 
 export interface JWTInspectionResult {
   is_valid_jwt: boolean;
@@ -240,7 +240,7 @@ export interface LedgerVerificationResult {
   reason?: string;
 }
 
-// --- V3.0-EXECUTION TYPES (suggestion-v2.md) ---
+// --- Execution & Cryptanalysis Interfaces ---
 
 export interface ColumnarCandidate {
   columns: number;
@@ -322,7 +322,7 @@ export interface SanitizedContentResult {
   redaction_keys: string[];
 }
 
-// --- V4.0 Enterprise & Post-Quantum Interfaces (suggestion-v3.md) ---
+// --- Enterprise & Post-Quantum Interfaces ---
 
 export interface PQCHandshakeResult {
   status: string;
@@ -414,7 +414,7 @@ export interface SBOMManifest {
   components?: any[];
 }
 
-// --- V5.0 AUTONOMOUS AGENTIC & GLOBAL FORENSIC GRID TYPES (suggestion-v4.md) ---
+// --- Autonomous Agentic & Global Forensic Grid Types ---
 
 export interface AgenticSMTResult {
   status: string;
@@ -508,7 +508,7 @@ export interface FedLMRoundResult {
   classes: string[];
 }
 
-// --- V6.0 NEURAL-QUANTUM SILICON FABRIC TYPES (suggestion-v5.md) ---
+// --- Neural-Quantum Silicon Fabric Types ---
 
 export interface SNNRasterEvent {
   timestep: number;
@@ -638,7 +638,7 @@ export interface ZKSNARKVerifyResult {
   reason?: string;
 }
 
-// --- V7.0 AUTONOMOUS SILICON REGENERATION & QKD TYPES (suggestion-v6.md) ---
+// --- Autonomous Silicon Regeneration & QKD Types ---
 
 export interface EFPGALutNode {
   id: number;
@@ -759,7 +759,7 @@ export interface QKDBellTestResult {
   status: string;
 }
 
-// --- V8.0 AUTONOMOUS SPACE MESH & PHOTONIC RESISTANCE TYPES (suggestion-v7.md) ---
+// --- Autonomous Space Mesh & Photonic Types ---
 
 export interface FSOLinkBudget {
   distance_km: number;
@@ -878,7 +878,7 @@ export interface ASTMutationResult {
   autonomous_status: string;
 }
 
-// --- V9.0 SINGULARITY SILICON & DEEP SPACE INTERPLANETARY TYPES ---
+// --- Singularity Silicon & Space Types ---
 
 export interface DTNNode {
   eid: string;
@@ -1021,7 +1021,7 @@ export interface MicrofluidicTelemetry {
   measured_dissolution_ns: number;
 }
 
-// V26.0 Trans-Recursive Absolute Bio-Cognitive Types
+// Trans-Recursive Absolute Bio-Cognitive Types
 export interface TransRecursiveState {
   membranePotentialUv: number;
   sppWavevectorReal: number;
@@ -1159,7 +1159,7 @@ export interface TransRecursiveZeroizeResult {
   fail_closed_confirmed: boolean;
 }
 
-// V32.0 Absolute Omnipresent Metareality Singularity Types (suggestion-v31.md)
+// Absolute Omnipresent Metareality Singularity Types
 export interface OmnipresentSingularityState {
   membranePotentialUv: number;
   hypercontinuumPhaseRad: number;

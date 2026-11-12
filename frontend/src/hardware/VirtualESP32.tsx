@@ -169,7 +169,7 @@ export const VirtualESP32: React.FC<VirtualESP32Props> = ({
           <div className="flex items-center space-x-2">
             <Cpu className="w-5 h-5 text-[#00E5FF]" />
             <span className="font-mono text-xs font-bold text-white tracking-widest uppercase">
-              ESP32-S3 CONTROLLER (V7.0 AUTONOMOUS SILICON & QUANTUM MESH)
+              ESP32-S3 CONTROLLER (AUTONOMOUS SILICON & QUANTUM MESH)
             </span>
           </div>
 
@@ -301,7 +301,7 @@ export const VirtualESP32: React.FC<VirtualESP32Props> = ({
           </div>
         </div>
 
-        {/* Rotary Encoder & Active Tamper Mesh Control Deck (suggestion-v2 Section 2.2 & 2.4) */}
+        {/* Rotary Encoder & Active Tamper Mesh Control Deck */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[#0B0F17] p-4 rounded-xl border border-[#232B3E]">
           {/* Quadrature Rotary Encoder Control */}
           <div className="space-y-3">
@@ -434,7 +434,7 @@ export const VirtualESP32: React.FC<VirtualESP32Props> = ({
           </div>
         </div>
 
-        {/* Dual-Core FreeRTOS & V3.0 Pinout Tabbed Panel */}
+        {/* Dual-Core FreeRTOS & Pinout Tabbed Panel */}
         <div className="glass-panel p-4 rounded-xl space-y-3">
           <div className="flex items-center justify-between border-b border-[#232B3E] pb-2">
             <div className="flex space-x-2">
@@ -456,7 +456,7 @@ export const VirtualESP32: React.FC<VirtualESP32Props> = ({
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                V3.0 PCB PINOUT
+                PCB PINOUT
               </button>
             </div>
             <span className="text-[10px] font-mono text-slate-500">ESP32-S3 WROOM-1</span>

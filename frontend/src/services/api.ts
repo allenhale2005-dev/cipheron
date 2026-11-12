@@ -212,7 +212,7 @@ export const api = {
       body: JSON.stringify({ evidence })
     }),
 
-  // --- Roadmap V2.0 Methods ---
+  // --- Cryptanalysis & Parsing Methods ---
 
   inspectJwt: (content: string) =>
     fetchJson<JWTInspectionResult>('/esoteric/jwt', {
@@ -271,7 +271,7 @@ export const api = {
   verifyLedger: () =>
     fetchJson<LedgerVerificationResult>('/ledger/verify'),
 
-  // --- V3.0-EXECUTION Methods ---
+  // --- Execution & Sanitization Methods ---
 
   solveColumnar: (content: string, maxCols = 8) =>
     fetchJson<ColumnarTranspositionResult>('/ciphers/columnar', {
@@ -321,7 +321,7 @@ export const api = {
       body: JSON.stringify({ content })
     }),
 
-  // --- V4.0-ENTERPRISE Methods (suggestion-v3.md) ---
+  // --- Enterprise & Post-Quantum Methods ---
 
   executePQCHandshake: () =>
     fetchJson<PQCHandshakeResult>('/pqc/handshake', {
@@ -384,7 +384,7 @@ export const api = {
       })
     }),
 
-  // --- V5.0-AUTONOMOUS AGENTIC & GLOBAL FORENSIC GRID (suggestion-v4.md) ---
+  // --- Autonomous Agentic & Global Forensic Grid Methods ---
 
   solveAgenticSMT: (ciphertext: string, maxKeyLen = 4) =>
     fetchJson<AgenticSMTResult>('/agentic/solve-smt', {
@@ -456,7 +456,7 @@ export const api = {
       })
     }),
 
-  // --- V6.0 NEURAL-QUANTUM SILICON FABRIC & ZK METHODS (suggestion-v5.md) ---
+  // --- Neural-Quantum Silicon Fabric & ZK Methods ---
 
   processSNNEvent: (data: string) =>
     fetchJson<SNNInferenceResult>('/snn/infer', {
@@ -510,7 +510,7 @@ export const api = {
       body: JSON.stringify({ proof })
     }),
 
-  // --- V7.0 AUTONOMOUS SILICON REGENERATION & QKD METHODS (suggestion-v6.md) ---
+  // --- Autonomous Silicon Regeneration & QKD Methods ---
 
   synthesizeEFPGA: (transformationType = 'LFSR_STREAM_CIPHER', polynomialTap = 0x80000057, sboxVariant = 'AES_AFFINE') =>
     fetchJson<EFPGANetlistResult>('/efpga/synthesize', {
@@ -574,7 +574,7 @@ export const api = {
   evaluateQKDBellTest: () =>
     fetchJson<QKDBellTestResult>('/qkd/bell-test'),
 
-  // --- V8.0 AUTONOMOUS SPACE MESH & PHOTONIC RESISTANCE METHODS (suggestion-v7.md) ---
+  // --- Autonomous Space Mesh & Photonic Methods ---
 
   calculateFSOLinkBudget: (params?: {
     distance_km?: number;
@@ -655,9 +655,9 @@ export const api = {
       })
     }),
 
-  // --- V9.0 SINGULARITY SILICON & DEEP SPACE INTERPLANETARY API ---
+  // --- Singularity Silicon & Deep Space Interplanetary API ---
 
-  dispatchDTNBundle: (sourceEid = "dtn://earth.ground/node-alpha", destinationEid = "dtn://mars.surface/jezero-term", payloadText = "CIPHERON_V9_PAYLOAD", requestCustody = true) =>
+  dispatchDTNBundle: (sourceEid = "dtn://earth.ground/node-alpha", destinationEid = "dtn://mars.surface/jezero-term", payloadText = "CIPHERON_PAYLOAD", requestCustody = true) =>
     fetchJson<DTNBundleInfo>('/dtn/bundle-dispatch', {
       method: 'POST',
       body: JSON.stringify({
@@ -748,7 +748,7 @@ export const api = {
       })
     }),
 
-  // V26.0 Trans-Recursive Absolute Bio-Cognitive API
+  // Trans-Recursive Absolute Bio-Cognitive API
   getTransRecursiveTelemetry: () =>
     fetchJson<TransRecursiveTelemetry>('/trans-recursive/telemetry'),
 
