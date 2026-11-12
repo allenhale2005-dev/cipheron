@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { HolographicSingularity3D } from '../components/HolographicSingularity3D';
+import { BASE_URL } from '../services/api';
 import {
   Globe2,
   Atom,
@@ -41,9 +42,9 @@ export const CosmicOmnipresencePage: React.FC = () => {
   const fetchTelemetry = async () => {
     try {
       const [hRes, bRes, cRes] = await Promise.all([
-        fetch('/api/v1/holographic/telemetry'),
-        fetch('/api/v1/biomolecular/telemetry'),
-        fetch('/api/v1/power/casimir-harvest/telemetry'),
+        fetch(`${BASE_URL}/holographic/telemetry`),
+        fetch(`${BASE_URL}/biomolecular/telemetry`),
+        fetch(`${BASE_URL}/power/casimir-harvest/telemetry`),
       ]);
       if (hRes.ok) setHoloTelemetry(await hRes.json());
       if (bRes.ok) setBioTelemetry(await bRes.json());
@@ -85,7 +86,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
   const handleContractTensor = async () => {
     setIsContracting(true);
     try {
-      const res = await fetch('/api/v1/holographic/contract-tensor', {
+      const res = await fetch(`${BASE_URL}/holographic/contract-tensor`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payload_text: bulkStatePayload }),
@@ -112,7 +113,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
 
   const handleRepairGate = async () => {
     try {
-      const res = await fetch('/api/v1/biomolecular/repair-gate', {
+      const res = await fetch(`${BASE_URL}/biomolecular/repair-gate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ damaged_gate_id: targetGateId }),
@@ -136,7 +137,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
 
   const handleReconfigureNetlist = async () => {
     try {
-      const res = await fetch('/api/v1/biomolecular/reconfigure-netlist', {
+      const res = await fetch(`${BASE_URL}/biomolecular/reconfigure-netlist`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ target_topology: 'HYPER_DIMENSIONAL_CROSSBAR_LATTICE' }),
@@ -158,7 +159,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
   const handleCavitySpacingChange = async (newSpacing: number) => {
     setCavitySpacingNm(newSpacing);
     try {
-      const res = await fetch('/api/v1/power/casimir-harvest/simulate', {
+      const res = await fetch(`${BASE_URL}/power/casimir-harvest/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cavity_spacing_nm: newSpacing }),
@@ -182,7 +183,7 @@ export const CosmicOmnipresencePage: React.FC = () => {
 
   const handleVacuumDecay = async () => {
     try {
-      const res = await fetch('/api/v1/security/vacuum-decay-zeroize', { method: 'POST' });
+      const res = await fetch(`${BASE_URL}/security/vacuum-decay-zeroize`, { method: 'POST' });
       if (res.ok) {
         setDecayResult(await res.json());
       }

@@ -43,8 +43,17 @@ export const App: React.FC = () => {
     // WebSocket connection for live telemetry
     let ws: WebSocket | null = null;
     try {
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws/stream`;
+      let wsUrl: string;
+      if (import.meta.env.VITE_WS_URL) {
+        wsUrl = import.meta.env.VITE_WS_URL;
+      } else if (import.meta.env.VITE_API_BASE_URL) {
+        const apiUrl = new URL(import.meta.env.VITE_API_BASE_URL, window.location.origin);
+        const wsProto = apiUrl.protocol === 'https:' ? 'wss:' : 'ws:';
+        wsUrl = `${wsProto}//${apiUrl.host}/ws/stream`;
+      } else {
+        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        wsUrl = `${protocol}//${window.location.host}/ws/stream`;
+      }
       ws = new WebSocket(wsUrl);
 
       ws.onopen = () => setWsConnected(true);

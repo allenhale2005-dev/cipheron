@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChronoTensorSingularity3D } from '../components/ChronoTensorSingularity3D';
+import { BASE_URL } from '../services/api';
 import {
   Clock,
   Sparkles,
@@ -45,9 +46,9 @@ export const ChronoRecursionPage: React.FC = () => {
   const fetchTelemetry = async () => {
     try {
       const [oRes, cRes, pRes] = await Promise.all([
-        fetch('/api/v1/omni-tensor/telemetry'),
-        fetch('/api/v1/chrono-provenance/telemetry'),
-        fetch('/api/v1/power/planck-harvest/telemetry'),
+        fetch(`${BASE_URL}/omni-tensor/telemetry`),
+        fetch(`${BASE_URL}/chrono-provenance/telemetry`),
+        fetch(`${BASE_URL}/power/planck-harvest/telemetry`),
       ]);
       if (oRes.ok) setOmniTelemetry(await oRes.json());
       if (cRes.ok) setChronoTelemetry(await cRes.json());
@@ -88,7 +89,7 @@ export const ChronoRecursionPage: React.FC = () => {
   const handleContractTensor = async () => {
     setIsContracting(true);
     try {
-      const res = await fetch('/api/v1/omni-tensor/contract', {
+      const res = await fetch(`${BASE_URL}/omni-tensor/contract`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ payload_text: hyperVectorInput }),
@@ -116,7 +117,7 @@ export const ChronoRecursionPage: React.FC = () => {
     try {
       const t1 = 100.0;
       const t2 = 100.0 + timeDeltaMs / 1000.0;
-      const res = await fetch('/api/v1/chrono-provenance/verify-coherence', {
+      const res = await fetch(`${BASE_URL}/chrono-provenance/verify-coherence`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ timestamp_t1: t1, timestamp_t2: t2 }),
@@ -142,7 +143,7 @@ export const ChronoRecursionPage: React.FC = () => {
 
   const handleEntropicInvert = async () => {
     try {
-      const res = await fetch('/api/v1/chrono-provenance/entropic-invert', {
+      const res = await fetch(`${BASE_URL}/chrono-provenance/entropic-invert`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ noise_hex: noiseHexInput }),
@@ -167,7 +168,7 @@ export const ChronoRecursionPage: React.FC = () => {
   const handleCutoffChange = async (newCutoff: number) => {
     setCutoffThz(newCutoff);
     try {
-      const res = await fetch('/api/v1/power/planck-harvest/simulate', {
+      const res = await fetch(`${BASE_URL}/power/planck-harvest/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cutoff_thz: newCutoff }),
@@ -190,7 +191,7 @@ export const ChronoRecursionPage: React.FC = () => {
 
   const handleChronoZeroize = async () => {
     try {
-      const res = await fetch('/api/v1/security/chrono-decay-zeroize', { method: 'POST' });
+      const res = await fetch(`${BASE_URL}/security/chrono-decay-zeroize`, { method: 'POST' });
       if (res.ok) {
         setZeroizeResult(await res.json());
       }
