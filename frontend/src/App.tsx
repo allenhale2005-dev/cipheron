@@ -2,49 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Navigation, ActiveTab } from './components/Navigation';
 import { Workspace } from './pages/Workspace';
-import { HardwarePage } from './pages/HardwarePage';
-import { CodeAnalysisPage } from './pages/CodeAnalysisPage';
-import { BinaryPage } from './pages/BinaryPage';
-import { SecurityPage } from './pages/SecurityPage';
-import { ExplainPage } from './pages/ExplainPage';
+import { TacticalConsolePage } from './pages/TacticalConsolePage';
 import { KasiskiPage } from './pages/KasiskiPage';
 import { EsotericParsersPage } from './pages/EsotericParsersPage';
 import { WasmSandboxPage } from './pages/WasmSandboxPage';
-import { EnterprisePage } from './pages/EnterprisePage';
-import { GlobalGridPage } from './pages/GlobalGridPage';
 import { NeuralFabricPage } from './pages/NeuralFabricPage';
 import { AutonomousSiliconPage } from './pages/AutonomousSiliconPage';
-import { OrbitalSpacePage } from './pages/OrbitalSpacePage';
-import { SingularitySiliconPage } from './pages/SingularitySiliconPage';
-import { OmegaChipletPage } from './pages/OmegaChipletPage';
-import { TranscendencePage } from './pages/TranscendencePage';
-import { NexusOmniPage } from './pages/NexusOmniPage';
 import { CosmicOmnipresencePage } from './pages/CosmicOmnipresencePage';
 import { ChronoRecursionPage } from './pages/ChronoRecursionPage';
-import { CalabiYauContinuumPage } from './pages/CalabiYauContinuumPage';
-import { MultiverseSingularityPage } from './pages/MultiverseSingularityPage';
-import { TransCosmicContinuumPage } from './pages/TransCosmicContinuumPage';
-import { OmniSingularityMatrixPage } from './pages/OmniSingularityMatrixPage';
-import { OmniInfinityMatrixPage } from './pages/OmniInfinityMatrixPage';
-import { OmniTotalityMatrixPage } from './pages/OmniTotalityMatrixPage';
 import { OcularGazePage } from './pages/OcularGazePage';
-import { HybridBciPage } from './pages/HybridBciPage';
-import { BioQuantumPage } from './pages/BioQuantumPage';
-import { OmniSynapticPage } from './pages/OmniSynapticPage';
-import { OmniCognitivePage } from './pages/OmniCognitivePage';
-import { AbsoluteCognitivePage } from './pages/AbsoluteCognitivePage';
-import { OmnipresentMetarealityPage } from './pages/OmnipresentMetarealityPage';
-import { TacticalConsolePage } from './pages/TacticalConsolePage';
+import { HardwarePage } from './pages/HardwarePage';
+import { CodeAnalysisPage } from './pages/CodeAnalysisPage';
+import { BinaryPage } from './pages/BinaryPage';
 import { SecurityMode, HardwareStatus } from './types';
 import { api } from './services/api';
-import { ShieldAlert, Terminal, Wifi, CheckCircle2 } from 'lucide-react';
+import { ShieldAlert } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('workspace');
+  const [isNavExpanded, setIsNavExpanded] = useState<boolean>(true);
   const [currentProfile, setCurrentProfile] = useState<SecurityMode>('STANDARD');
   const [hardwareStatus, setHardwareStatus] = useState<HardwareStatus | undefined>(undefined);
   const [isWiping, setIsWiping] = useState(false);
-  const [explainEvidence, setExplainEvidence] = useState<any>(null);
   const [wsConnected, setWsConnected] = useState(false);
 
   // Poll hardware status & security profile on load
@@ -114,13 +93,8 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleNavigateToExplain = (evidence: any) => {
-    setExplainEvidence(evidence);
-    setActiveTab('explain');
-  };
-
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-[#E0E6ED] flex flex-col selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
+    <div className="min-h-screen bg-[#0B0F17] text-[#E0E6ED] relative selection:bg-[#00E5FF]/20 selection:text-[#00E5FF]">
       {/* Full Screen Memory Shredding Animation Overlay */}
       {isWiping && (
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center space-y-4 animate-pulse">
@@ -137,134 +111,95 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* Header */}
-      <Header
-        currentProfile={currentProfile}
-        onProfileChange={handleProfileChange}
-        onPanicWipe={handlePanicWipe}
-        hardwareStatus={hardwareStatus}
-        isWiping={isWiping}
+      {/* Slide Navigation Rail */}
+      <Navigation
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        isOpen={isNavExpanded}
+        onToggle={() => setIsNavExpanded(!isNavExpanded)}
       />
 
-      {/* Navigation Subsystem Bar */}
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+      {/* Main Layout Container with responsive padding aligned to slide nav width */}
+      <div
+        className={`flex flex-col min-h-screen transition-all duration-300 ease-in-out ${
+          isNavExpanded ? 'pl-64 md:pl-72' : 'pl-16'
+        }`}
+      >
+        {/* Header */}
+        <Header
+          currentProfile={currentProfile}
+          onProfileChange={handleProfileChange}
+          onPanicWipe={handlePanicWipe}
+          hardwareStatus={hardwareStatus}
+          isWiping={isWiping}
+          isNavExpanded={isNavExpanded}
+          onToggleNav={() => setIsNavExpanded(!isNavExpanded)}
+        />
 
-      {/* Main Workspace Body */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-8">
-        {activeTab === 'workspace' && (
-          <Workspace
-            currentProfile={currentProfile}
-            onNavigateToExplain={handleNavigateToExplain}
-          />
-        )}
+        {/* 13 Core Defense & Cryptanalysis Suites */}
+        <main className="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-8">
+          {activeTab === 'workspace' && (
+            <Workspace currentProfile={currentProfile} />
+          )}
 
-        {activeTab === 'tactical-console' && (
-          <TacticalConsolePage
-            currentProfile={currentProfile}
-            onProfileChange={handleProfileChange}
-          />
-        )}
+          {activeTab === 'tactical-console' && (
+            <TacticalConsolePage
+              currentProfile={currentProfile}
+              onProfileChange={handleProfileChange}
+            />
+          )}
 
-        {activeTab === 'kasiski' && <KasiskiPage />}
+          {activeTab === 'kasiski' && <KasiskiPage />}
 
-        {activeTab === 'esoteric' && <EsotericParsersPage />}
+          {activeTab === 'esoteric' && <EsotericParsersPage />}
 
-        {activeTab === 'wasm' && <WasmSandboxPage />}
+          {activeTab === 'wasm' && <WasmSandboxPage />}
 
-        {activeTab === 'enterprise' && <EnterprisePage currentProfile={currentProfile} />}
+          {activeTab === 'neural-fabric' && <NeuralFabricPage />}
 
-        {activeTab === 'global-grid' && <GlobalGridPage />}
+          {activeTab === 'quantum-silicon' && <AutonomousSiliconPage />}
 
-        {activeTab === 'neural-fabric' && <NeuralFabricPage />}
+          {activeTab === 'cosmic-omnipresence' && <CosmicOmnipresencePage />}
 
-        {activeTab === 'quantum-silicon' && <AutonomousSiliconPage />}
+          {activeTab === 'chrono-recursion' && <ChronoRecursionPage />}
 
-        {activeTab === 'orbital-space' && <OrbitalSpacePage />}
+          {activeTab === 'ocular-gaze' && <OcularGazePage />}
 
-        {activeTab === 'singularity-silicon' && <SingularitySiliconPage />}
+          {activeTab === 'hardware' && (
+            <HardwarePage
+              hardwareStatus={hardwareStatus}
+              onRefreshStatus={refreshHardware}
+              onPanicTriggered={handlePanicWipe}
+            />
+          )}
 
-        {activeTab === 'omega-chiplet' && <OmegaChipletPage />}
+          {activeTab === 'code' && <CodeAnalysisPage />}
 
-        {activeTab === 'transcendence' && <TranscendencePage />}
+          {activeTab === 'binary' && <BinaryPage />}
+        </main>
 
-        {activeTab === 'nexus-omni' && <NexusOmniPage />}
+        {/* System Status Footer */}
+        <footer className="bg-[#10141D] border-t border-[#232B3E] px-4 lg:px-8 py-2.5 text-xs font-mono text-slate-500">
+          <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center space-x-3">
+              <span className="flex items-center space-x-1.5 text-slate-400">
+                <span className={`w-2 h-2 rounded-full ${wsConnected ? 'bg-[#00E676]' : 'bg-amber-400'}`} />
+                <span>WS STREAM: {wsConnected ? 'SYNCHRONIZED' : 'REST POLLING'}</span>
+              </span>
+              <span>|</span>
+              <span className="text-[#00E5FF]">PROFILE: {currentProfile}</span>
+            </div>
 
-        {activeTab === 'cosmic-omnipresence' && <CosmicOmnipresencePage />}
-
-        {activeTab === 'chrono-recursion' && <ChronoRecursionPage />}
-
-        {activeTab === 'calabi-yau-continuum' && <CalabiYauContinuumPage />}
-
-        {activeTab === 'multiverse-singularity' && <MultiverseSingularityPage />}
-
-        {activeTab === 'transcosmic-continuum' && <TransCosmicContinuumPage />}
-
-        {activeTab === 'omni-singularity' && <OmniSingularityMatrixPage />}
-
-        {activeTab === 'omni-infinity' && <OmniInfinityMatrixPage />}
-
-        {activeTab === 'omni-totality' && <OmniTotalityMatrixPage />}
-
-        {activeTab === 'ocular-gaze' && <OcularGazePage />}
-
-        {activeTab === 'hybrid-bci' && <HybridBciPage />}
-
-        {activeTab === 'bio-quantum' && <BioQuantumPage />}
-
-        {activeTab === 'omni-synaptic' && <OmniSynapticPage />}
-
-        {activeTab === 'omni-cognitive' && <OmniCognitivePage />}
-
-        {activeTab === 'trans-recursive' && <AbsoluteCognitivePage />}
-
-        {activeTab === 'omnipresent-metareality' && <OmnipresentMetarealityPage />}
-
-        {activeTab === 'hardware' && (
-          <HardwarePage
-            hardwareStatus={hardwareStatus}
-            onRefreshStatus={refreshHardware}
-            onPanicTriggered={handlePanicWipe}
-          />
-        )}
-
-        {activeTab === 'code' && <CodeAnalysisPage />}
-
-        {activeTab === 'binary' && <BinaryPage />}
-
-        {activeTab === 'security' && (
-          <SecurityPage
-            currentProfile={currentProfile}
-            onProfileChange={handleProfileChange}
-            onPanicWipe={handlePanicWipe}
-          />
-        )}
-
-        {activeTab === 'explain' && <ExplainPage initialEvidence={explainEvidence} />}
-      </main>
-
-      {/* System Status Footer */}
-      <footer className="bg-[#10141D] border-t border-[#232B3E] px-4 lg:px-8 py-2.5 text-xs font-mono text-slate-500">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center space-x-3">
-            <span className="flex items-center space-x-1.5 text-slate-400">
-              <span className={`w-2 h-2 rounded-full ${wsConnected ? 'bg-[#00E676]' : 'bg-amber-400'}`} />
-              <span>WS STREAM: {wsConnected ? 'SYNCHRONIZED' : 'REST POLLING'}</span>
-            </span>
-            <span>|</span>
-            <span className="text-[#00E5FF]">PROFILE: {currentProfile}</span>
+            <div className="flex items-center space-x-4">
+              <span className="text-slate-400">CIPHERON-X1 v32.0.0 TACTICAL CONSOLE</span>
+              <span className="hidden sm:inline text-slate-600">&bull;</span>
+              <span className="text-sky-400 hidden sm:inline">13 DEDICATED CRYPTANALYSIS &amp; HARDWARE SUITES</span>
+              <span className="hidden sm:inline text-slate-600">&bull;</span>
+              <span className="text-emerald-400 font-bold hidden sm:inline">100/100 PRODUCTION GRADE</span>
+            </div>
           </div>
-
-          <div className="flex items-center space-x-4">
-            <span className="text-slate-400">CIPHERON-X1 v32.0.0-ABSOLUTE OMNIPRESENT METAREALITY SINGULARITY ARCHITECTURE</span>
-            <span className="hidden sm:inline text-slate-600">&bull;</span>
-            <span className="text-indigo-400 hidden sm:inline">SOLITON-HYPERCONTINUUM (10.0 Zbps/mm&sup2;) &amp; TERAHERTZ (25000Hz) &amp; BELL-STATE STEGANO &amp; 131,072-BIT KEY</span>
-            <span className="hidden sm:inline text-slate-600">&bull;</span>
-            <span className="text-slate-400 hidden sm:inline">100/100 PRODUCTION GRADE</span>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };
-
-

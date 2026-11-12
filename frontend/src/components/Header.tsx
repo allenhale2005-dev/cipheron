@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, ShieldAlert, Cpu, AlertTriangle, RefreshCw, Activity, Terminal } from 'lucide-react';
+import { Shield, ShieldAlert, Cpu, AlertTriangle, RefreshCw, Activity, Terminal, PanelLeftClose, PanelLeft } from 'lucide-react';
 import { SecurityMode, HardwareStatus } from '../types';
 
 interface HeaderProps {
@@ -8,6 +8,8 @@ interface HeaderProps {
   onPanicWipe: () => void;
   hardwareStatus?: HardwareStatus;
   isWiping?: boolean;
+  isNavExpanded?: boolean;
+  onToggleNav?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -15,7 +17,9 @@ export const Header: React.FC<HeaderProps> = ({
   onProfileChange,
   onPanicWipe,
   hardwareStatus,
-  isWiping
+  isWiping,
+  isNavExpanded,
+  onToggleNav
 }) => {
   const [showPanicModal, setShowPanicModal] = useState(false);
 
@@ -45,8 +49,19 @@ export const Header: React.FC<HeaderProps> = ({
     <>
       <header className="bg-[#161B26]/90 border-b border-[#232B3E] px-4 lg:px-8 py-3 sticky top-0 z-40 backdrop-blur-md">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          {/* Logo & System Title */}
+          {/* Logo & System Title & Nav Toggle */}
           <div className="flex items-center space-x-3">
+            {onToggleNav && (
+              <button
+                onClick={onToggleNav}
+                title={isNavExpanded ? 'Collapse Slide Navigation ( [ )' : 'Expand Slide Navigation ( [ )'}
+                aria-label="Toggle Slide Navigation"
+                className="p-1.5 rounded bg-[#0B0F17] hover:bg-[#232B3E] text-[#00E5FF] hover:text-white border border-[#232B3E] transition-colors"
+              >
+                {isNavExpanded ? <PanelLeftClose className="w-5 h-5" /> : <PanelLeft className="w-5 h-5" />}
+              </button>
+            )}
+
             <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-[#00E5FF]/20 to-blue-600/30 border border-[#00E5FF]/40 shadow-lg shadow-[#00E5FF]/10">
               <Cpu className="w-6 h-6 text-[#00E5FF] animate-pulse" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#00E676] rounded-full ring-2 ring-[#0B0F17]" />
