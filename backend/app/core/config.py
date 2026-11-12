@@ -1,3 +1,4 @@
+import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Literal
 
@@ -24,7 +25,7 @@ class Settings(BaseSettings):
     MAX_CANDIDATES_PER_STAGE: int = 50
     
     # Database
-    DATABASE_URL: str = "sqlite:///./cipheron.db"
+    DATABASE_URL: str = "sqlite:////tmp/cipheron.db" if os.environ.get("VERCEL") else "sqlite:///./cipheron.db"
     
     # Sandboxing & Memory
     MAX_DECOMPRESSION_RATIO: float = 10.0

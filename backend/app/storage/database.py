@@ -2,7 +2,7 @@ import sqlite3
 import os
 from typing import List, Dict, Any, Optional
 
-DB_FILE = "cipheron.db"
+DB_FILE = "/tmp/cipheron.db" if os.environ.get("VERCEL") else "cipheron.db"
 
 def init_db():
     conn = sqlite3.connect(DB_FILE)
